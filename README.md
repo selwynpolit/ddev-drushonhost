@@ -2,7 +2,7 @@
 
 ## What is ddev-drushonhost?
 
-In DDEV v1.22.4+, the former facility to use the Drupal `drush` command on the host was removed.  That usage was always fragile, but some people liked and used it. Some also appreciate the performance gains this yields.  This also permits running PHPUnit/DTT ([Drupal Test Traits](https://gitlab.com/weitzman/drupal-test-traits)) tests on the host instead of running them in the containers. [See this article for more on running DTT on the host](https://selwynpolit.github.io/d9book/dtt#run-tests-on-the-host)
+In DDEV v1.22.4+, the former facility to use the Drupal `drush` command on the host was removed.  That usage was always fragile, but some people liked and used it. This add-in also permits running PHPUnit/DTT ([Drupal Test Traits](https://gitlab.com/weitzman/drupal-test-traits)) tests on the host instead of running them in the containers. [See this article for more on running DTT on the host](https://selwynpolit.github.io/d9book/dtt#run-tests-on-the-host)
 
 This add-on adds that facility again.
 
