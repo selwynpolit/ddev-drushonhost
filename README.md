@@ -15,7 +15,23 @@ When using drush on the host you need:
 ```
 export IS_DDEV_PROJECT=true
 ```
-or this in your `settings.local.php`:
+OR
+
+In your project `settings.php` make sure the end of the file looks like this:
+
+```php
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
+
+// Automatically generated include for settings managed by ddev.
+$ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
+if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
+  require $ddev_settings;
+}
+```
+
+and then add this to your `settings.local.php`:
 
 ```
 putenv("IS_DDEV_PROJECT=true");
